@@ -5,45 +5,51 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div
-      id="Footer"
-      className="flex justify-around bg-[#465697] text-white p-10 md:p-12 items-center "
-    >
-      <div>
-        <h1 className="text-2xl md:text-6xl font-bold ">Contact</h1>
-        <h3 className="text-sm md:text-2xl font-normal">
+    <footer id="Footer" className="bg-[#465697] text-white p-10 md:p-12 flex flex-col md:flex-row items-center justify-between">
+      <div className="text-center md:text-left">
+        <h1 className="text-3xl md:text-5xl font-bold">Contact</h1>
+        <h3 className="text-md md:text-xl opacity-80">
           Feel free to reach out!
         </h3>
       </div>
-      <ul className="text-sm md:text-xl">
-        <li className="flex gap-1 items-center">
-          <a  className="flex">
-            <MdOutlineEmail size={30} />
+
+      <ul className="space-y-3 text-sm md:text-lg mt-6 md:mt-0">
+        <li>
+          <a
+            href="mailto:mr9141599@gmail.com"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            aria-label="Email"
+          >
+            <MdOutlineEmail size={28} />
             mr9141599@gmail.com
           </a>
         </li>
-        <li className="flex gap-1 items-center">
+        <li>
           <a
             href="https://linkedin.com/in/rafique09"
             target="_blank"
-            className="flex "
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            aria-label="LinkedIn"
           >
-            <CiLinkedin size={30} />
-            Linkedin
+            <CiLinkedin size={28} />
+            LinkedIn
           </a>
         </li>
-        <li className="flex gap-1 items-center">
+        <li>
           <a
             href="https://github.com/MohummadRafique0"
             target="_blank"
-            className="flex"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            aria-label="GitHub"
           >
-            <FaGithub size={30} />
-            Github
+            <FaGithub size={28} />
+            GitHub
           </a>
         </li>
       </ul>
-    </div>
+    </footer>
   );
 };
 

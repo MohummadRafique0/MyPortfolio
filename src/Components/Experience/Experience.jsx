@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaCss3,
   FaHtml5,
@@ -8,122 +9,61 @@ import {
   FaPhp,
   FaLaravel,
 } from "react-icons/fa";
-import { SiMongodb, SiTailwindcss, SiNextdotjs, SiExpress } from "react-icons/si";
+import {
+  SiMongodb,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiExpress,
+} from "react-icons/si";
+
+const skills = [
+  { name: "HTML", icon: <FaHtml5 size={80} />, level: "Experienced" },
+  { name: "CSS", icon: <FaCss3 size={80} />, level: "Experienced" },
+  { name: "JavaScript", icon: <FaJs size={80} />, level: "Experienced" },
+  { name: "React", icon: <FaReact size={80} />, level: "Experienced" },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss size={80} />,
+    level: "Experienced",
+  },
+  { name: "Next.js", icon: <SiNextdotjs size={80} />, level: "Intermediate" },
+  { name: "Node.js", icon: <FaNodeJs size={80} />, level: "Intermediate" },
+  { name: "PHP", icon: <FaPhp size={80} />, level: "Experienced" },
+  { name: "Laravel", icon: <FaLaravel size={80} />, level: "Intermediate" },
+  { name: "Express.js", icon: <SiExpress size={80} />, level: "Basic" },
+  { name: "MongoDB", icon: <SiMongodb size={80} />, level: "Basic" },
+];
 
 const Experience = () => {
   return (
-    <div id="Experience" className="p-6 md:p-12">
-      <h1 className="text-2xl md:text-5xl flex items-center justify-center text-white font-bold">
+    <div id="Experience" className="p-6 md:p-12 text-white text-center">
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-3xl md:text-5xl font-bold"
+      >
         Hands-on Experience
-      </h1>
-      <h2 className="text-xl md:text-3xl flex items-center justify-center text-white font-bold pt-8">
-        Front-End Tools
-      </h2>
-      <div className="flex flex-wrap items-center justify-center py-3">
-        <div className="flex flex-wrap gap-5 justify-center">
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <FaHtml5 color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">HTML</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">
-                Experienced
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <FaCss3 color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">CSS</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">
-                Experienced
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <FaJs color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">JavaScript</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">
-                Experienced
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <FaReact color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">React</h2>
-              <p className="text-lg leading-tight py-2 font-semibold ">
-                Experienced
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <SiTailwindcss color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">Tailwind CSS</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">
-                Experienced
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <SiNextdotjs color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">Next JS</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">
-                Intermediate
-              </p>
-            </span>
-          </div>
-        </div>
-      </div>
-      <h2 className="text-xl md:text-3xl flex items-center justify-center text-white font-bold pt-10">
-        Back-End Tools
-      </h2>
-      <div className="flex flex-wrap items-center justify-center py-3 ">
-        <div className="flex flex-wrap gap-5 justify-center">
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <FaNodeJs color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">Node JS</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">
-                Intermediate
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <FaPhp color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">PHP</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">
-                Experienced
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-cente hover:scale-105 cursor-pointerr">
-            <FaLaravel color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">Laravel</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">
-                Intermediate
-              </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <SiExpress color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">ExpressJs</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">Basic </p>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center hover:scale-105 cursor-pointer">
-            <SiMongodb color="#4285F4" size={80} />
-            <span className="text-white">
-              <h2 className="leading-tight font-bold text-xl">Mongo DB</h2>
-              <p className="text-lg leading-tight py-2 font-semibold">Basic </p>
-            </span>
-          </div>
-        </div>
+      </motion.h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 15px rgba(255, 255, 255, 0.3)",
+            }}
+            className="flex flex-col items-center bg-slate-950 bg-opacity-45 rounded-lg p-6 hover:cursor-pointer"
+          >
+            <div className="text-blue-400">{skill.icon}</div>
+            <h2 className="mt-4 text-xl font-bold">{skill.name}</h2>
+            <p className="text-lg font-semibold mt-2">{skill.level}</p>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
